@@ -9,23 +9,11 @@ public class pruebas {
 
         //generador de numero 0-9 aleatorias
         for (int i = 0; i <= 100; i++) {
-            int n = (int) (Math.random() * 10 + 48);
-            String str = Character.toString((char) n);
-            System.out.println(str);
-        }
-        //generador de letras A-Z aleatorias
-        for (int i = 0; i <= 100; i++) {
-            int n = (int) (Math.random() * 26 + 65);
-            String str = Character.toString((char) n);
-            System.out.println(str);
+            int n = (int) (Math.random() * 2);
+
+            System.out.println(n);
         }
 
-        //generador de numero 0-9 aleatorias
-        for (int i = 0; i <= 100; i++) {
-            int n = (int) (Math.random() * 10 + 48);
-            String str = Character.toString((char) n);
-            System.out.println(str);
-        }
 
     }
 }
