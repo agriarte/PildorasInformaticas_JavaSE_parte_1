@@ -1,6 +1,7 @@
 package com.pedro.ejercioPasswords;
 
 public class Password {
+    public String getPassword;
     private int lon;//num caracteres contraseña
     private String password;
 
@@ -45,26 +46,26 @@ public class Password {
     // devuelve letra mayuscula al azar
     private String dameLetraMayuscula() {
         int n = (int) (Math.random() * 26 + 65);
-        String letra = Character.toString((char) n);
-        return letra;
+        return Character.toString((char) n);
     }
 
     // devuelve letra minuscula al azar
     private String dameLetraMinuscula() {
         int n = (int) (Math.random() * 26 + 97);
-        String letra = Character.toString((char) n);
-        return letra;
+        return Character.toString((char) n);
     }
 
     // devuelve numero al azar
     private String dameNumero() {
         int n = (int) (Math.random() * 10 + 48);
-        String numero = Character.toString((char) n);
-        return numero;
+        return Character.toString((char) n);
     }
 
     //devuelve longitud del password
     public int getTamanyo() {
         return password.length();
     }
+
+
+
 }
