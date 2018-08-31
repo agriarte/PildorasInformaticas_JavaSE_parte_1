@@ -18,7 +18,7 @@ public abstract class Personas {
 
 }
 
-class Empleados extends Personas {
+class Empleados extends Personas implements ParaTrabajadores {
 
     private double sueldo;
 
@@ -35,10 +35,16 @@ class Empleados extends Personas {
         return "El empleado " + this.getNombre() + " tiene un sueldo de " + sueldo + "€ y entró a trabajar en " +
                 fechaAlta;
     }
+
+    @Override
+    public double setBonus(double gratificacion) {
+        return ParaTrabajadores.bonus + gratificacion;
+    }
 }
 
-class Jefes extends Empleados {
+class Jefes extends Empleados implements ParaJefes {
     private double incentivo;
+    private String cargo;
     public Jefes(String nom, Date fechaAlta, double sueldo) {
         super(nom, fechaAlta, sueldo);
     }
@@ -46,6 +52,23 @@ class Jefes extends Empleados {
     private void setIncentivo (double incentivo){
         this.incentivo=incentivo;
     }
+
+    @Override
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    @Override
+    public String getCargo() {
+        return "\nademás tiene el cargo de " + cargo;
+    }
+
+    @Override
+    public double setBonus(double gratificacion) {
+        double prima = 2000;
+        return  prima + gratificacion + ParaJefes.bonus;
+    }
+
 }
 
 class Alumnos extends Personas {

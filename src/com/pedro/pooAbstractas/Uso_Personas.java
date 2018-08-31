@@ -15,5 +15,9 @@ public class Uso_Personas {
         Alumnos Maria = new Alumnos("Maria", "Dibujo", "Aula 6");
         System.out.println(Maria.getNombre());
         System.out.println(Maria.getDescripcion());
+
+        Jefes Perico = new Jefes("Perico",new Date (242342),4444);
+        System.out.println("El jefe " + Perico.getNombre() + " tiene un bonus de " +
+        Perico.setBonus(400));
     }
 }
